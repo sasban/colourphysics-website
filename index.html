@@ -58,7 +58,7 @@
       <p style="margin: 0 0 40px; max-width: 580px; font-size: 20px; color: #3A3E43">We measure colour and appearance under controlled conditions, and tell you — in numbers — how close your sample is to your standard. For tea, gemstones, textiles and anything else where “it looks right” decides the price.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 14px">
         <a href="#request" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #1F4FB8; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">Request a measurement</a>
-        <a href="#report" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border: 1px solid #16181A; text-decoration: none; font-weight: 500; font-size: 16px">See what a report shows</a>
+        <a href="#request" data-service="Colour consultation" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border: 1px solid #16181A; text-decoration: none; font-weight: 500; font-size: 16px">Book a colour consultation</a>
       </div>
     </div>
 
@@ -142,6 +142,7 @@
           <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #5B6066">GEMSTONES</span>
           <h3 style="margin: 0; font-size: 28px; font-weight: 600">Measured colour, not just a name</h3>
           <p style="margin: 0; color: #3A3E43">A colour and spectrum record for coloured stones to sit alongside the lab certificate — useful for matching pairs, documenting colour-change and describing a stone to a buyer who can’t see it.</p>
+          <a href="https://tejagems.com" style="align-self: flex-start; font-size: 15px; font-weight: 500; color: #1F4FB8">See it in practice: natural Ceylon stones at Téja →</a>
         </article>
         <article style="flex: 1 1 520px; background: #FFFFFF; padding: 36px; display: flex; flex-direction: column; gap: 14px">
           <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #5B6066">TEXTILES &amp; APPAREL</span>
@@ -192,7 +193,7 @@
           <li>Track status from sample received to report issued</li>
           <li>Download reports and see your full history</li>
         </ul>
-        <a href="#request" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid #16181A; text-decoration: none; font-weight: 500">Request portal access</a>
+        <a href="#request" data-service="Client portal access" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid #16181A; text-decoration: none; font-weight: 500">Request portal access</a>
       </div>
     </div>
   </section>
@@ -215,8 +216,8 @@
     <div style="max-width: 1240px; margin: 0 auto; padding: 104px 32px; display: flex; flex-wrap: wrap; gap: 48px 80px">
       <div style="flex: 1 1 360px">
         <p style="margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A9ADB2">Request a measurement</p>
-        <h2 style="margin: 0 0 24px; font-weight: 700; font-size: 52px; line-height: 1.05; letter-spacing: -0.02em">Tell us what you need measured.</h2>
-        <p style="margin: 0 0 28px; color: #C8CACC; max-width: 440px">We’ll reply with how to send samples, what we’ll measure and a quote.</p>
+        <h2 style="margin: 0 0 24px; font-weight: 700; font-size: 52px; line-height: 1.05; letter-spacing: -0.02em">Tell us what you need.</h2>
+        <p style="margin: 0 0 28px; color: #C8CACC; max-width: 440px">A measurement, or advice on colour standards, supplier approval or setting up a colour lab. We’ll reply with what we suggest and a quote.</p>
         <dl style="margin: 0; display: flex; flex-direction: column; gap: 16px">
           <div><dt style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A9ADB2">TURNAROUND</dt><dd style="margin: 4px 0 0">Agreed with you before samples are sent</dd></div>
           <div><dt style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A9ADB2">PRICING</dt><dd style="margin: 4px 0 0">Quoted upfront, per sample or per project — you’ll know the cost before you commit</dd></div>
@@ -234,6 +235,7 @@
           <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 8px"><label for="r-name" style="font-size: 14px; font-weight: 500">Name</label><input id="r-name" name="name" type="text" required style="min-height: 48px; padding: 0 14px; background: #16181A; color: #F4F4F1; border: 1px solid #4A4F55; font: inherit"></div>
           <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 8px"><label for="r-company" style="font-size: 14px; font-weight: 500">Company</label><input id="r-company" name="company" type="text" style="min-height: 48px; padding: 0 14px; background: #16181A; color: #F4F4F1; border: 1px solid #4A4F55; font: inherit"></div>
         </div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><label for="r-service" style="font-size: 14px; font-weight: 500">I’d like</label><select id="r-service" name="service" style="min-height: 48px; padding: 0 12px; background: #16181A; color: #F4F4F1; border: 1px solid #4A4F55; font: inherit"><option>A measurement</option><option>Colour consultation</option><option>Client portal access</option></select></div>
         <div style="display: flex; flex-direction: column; gap: 8px"><label for="r-email" style="font-size: 14px; font-weight: 500">Email</label><input id="r-email" name="email" type="email" required style="min-height: 48px; padding: 0 14px; background: #16181A; color: #F4F4F1; border: 1px solid #4A4F55; font: inherit"></div>
         <div style="display: flex; flex-wrap: wrap; gap: 18px">
           <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 8px"><label for="r-industry" style="font-size: 14px; font-weight: 500">Industry</label><select id="r-industry" name="industry" style="min-height: 48px; padding: 0 12px; background: #16181A; color: #F4F4F1; border: 1px solid #4A4F55; font: inherit"><option>Tea</option><option>Gemstones</option><option>Textiles &amp; apparel</option><option>Other</option></select></div>
@@ -258,6 +260,10 @@
 <script>
   // After the request form is sent, bring visitors back to this site's thank-you page
   document.getElementById('formNext').value = new URL('thanks.html', window.location.href).href;
+  // Buttons that lead to the form pre-select the service
+  document.querySelectorAll('[data-service]').forEach(function (a) {
+    a.addEventListener('click', function () { document.getElementById('r-service').value = a.dataset.service; });
+  });
 </script>
 </body>
 </html>
