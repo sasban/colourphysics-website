@@ -12,6 +12,22 @@
     main { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
     h1 { font-weight: 700; font-size: 2.6rem; letter-spacing: -0.02em; margin-bottom: 1rem; }
   </style>
+  <!-- Google Analytics (GA4). Counts visits, plus WhatsApp taps, email clicks and form sends as enquiries. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRKQ2CVPMP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRKQ2CVPMP');
+    gtag('event', 'generate_lead', {method: 'contact_form'});
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var h = a.getAttribute('href') || '';
+      if (/^https?:\/\/(wa\.me|api\.whatsapp\.com)\//i.test(h)) gtag('event', 'whatsapp_click', {link_url: h, transport_type: 'beacon'});
+      else if (/^mailto:/i.test(h)) gtag('event', 'email_click', {link_url: h, transport_type: 'beacon'});
+    });
+  </script>
 </head>
 <body>
   <main>

@@ -26,6 +26,21 @@
       form, figure { padding: 22px !important; }
     }
   </style>
+  <!-- Google Analytics (GA4). Counts visits, plus WhatsApp taps, email clicks and form sends as enquiries. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRKQ2CVPMP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRKQ2CVPMP');
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var h = a.getAttribute('href') || '';
+      if (/^https?:\/\/(wa\.me|api\.whatsapp\.com)\//i.test(h)) gtag('event', 'whatsapp_click', {link_url: h, transport_type: 'beacon'});
+      else if (/^mailto:/i.test(h)) gtag('event', 'email_click', {link_url: h, transport_type: 'beacon'});
+    });
+  </script>
 </head>
 <body>
 <div style="background: #F4F4F1; color: #16181A; font-family: 'Archivo', system-ui, sans-serif; font-size: 17px; line-height: 1.6">
